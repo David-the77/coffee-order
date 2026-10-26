@@ -2,7 +2,7 @@ const customerName = "Amina";
 const drink = "latte";   // espresso, latte, mocha or cold brew 
 const size = "large"; 
    // small, medium or large 
-let quantity = 7; 
+let quantity = 2; 
 const isMember = true; 
 const hour = 9;       
    // the hour of the day, from 0 to 23 
@@ -74,7 +74,7 @@ const hour = 9;
       }
 
       console.log("subtotal: $" + subtotal);
-      console.log("amount due after discounts: $" + amountdue);
+      console.log("After discounts: $" + amountdue);
 
       // rule 6 tax
       let tax = amountdue * 0.08;
@@ -86,7 +86,7 @@ const hour = 9;
     // 1. Make the name all capitals
     let capitalizedName = customerName.toUpperCase();
 
-    // 2. Use a ternary to check if it's 1 drink or multiple drinks
+    // 2.  check if it's 1 drink or multiple drinks
     let drinkWord = quantity === 1 ? "drink" : "drinks";
 
     // 3. Print the receipt using template literals
@@ -95,8 +95,11 @@ const hour = 9;
     Customer: ${capitalizedName}
     ${quantity} ${drinkWord}: ${size} ${drink}
     Subtotal: $${subtotal.toFixed(2)}
+    Member discount : ${"5%"}
+    After discounts: $${amountdue.toFixed(2)}
     Tax: $${tax.toFixed(2)}
     Total: $${total.toFixed(2)}
+    
     `);
 
     
